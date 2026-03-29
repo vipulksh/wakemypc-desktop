@@ -1,0 +1,15 @@
+[project]
+name = "pico-gui"
+version = "1.0.0"
+description = "GUI tool to manage WiFi configuration on Raspberry Pi Pico W 2 transmitters"
+requires-python = ">=3.10"
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+pico-gui = "pico_gui.main:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
