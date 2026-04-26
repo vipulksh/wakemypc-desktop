@@ -17,8 +17,8 @@ wakemypc-desktop = "wakemypc_desktop.main:main"
 
 [project.urls]
 Homepage = "https://wakemypc.com"
-Repository = "https://github.com/wakemypc/wakemypc-desktop"
-Issues = "https://github.com/wakemypc/wakemypc-desktop/issues"
+Repository = "https://github.com/vipulksh/wakemypc-desktop"
+Issues = "https://github.com/vipulksh/wakemypc-desktop/issues"
 
 [build-system]
 requires = ["setuptools>=68.0"]
