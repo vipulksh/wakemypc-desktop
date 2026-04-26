@@ -1,15 +1,28 @@
 [project]
-name = "pico-gui"
+name = "wakemypc-desktop"
 version = "1.0.0"
-description = "GUI tool to manage WiFi configuration on Raspberry Pi Pico W 2 transmitters"
+description = "Desktop companion for wakemypc.com -- manage Pico W transmitters from a GUI"
+readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
+authors = [
+    { name = "wakemypc.com contributors" },
+]
 dependencies = [
     "pyserial>=3.5",
 ]
 
 [project.scripts]
-pico-gui = "pico_gui.main:main"
+wakemypc-desktop = "wakemypc_desktop.main:main"
+
+[project.urls]
+Homepage = "https://wakemypc.com"
+Repository = "https://github.com/wakemypc/wakemypc-desktop"
+Issues = "https://github.com/wakemypc/wakemypc-desktop/issues"
 
 [build-system]
 requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

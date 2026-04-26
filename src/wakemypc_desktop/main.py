@@ -588,7 +588,7 @@ class PicoWiFiGUI:
 
 def main():
     """
-    Entry point for the pico-gui application.
+    Entry point for the wakemypc-desktop application.
 
     Creates the tkinter root window, instantiates the GUI, and starts the
     main event loop. The event loop runs until the user closes the window.
@@ -615,6 +615,6 @@ def main():
     root.mainloop()
 
 
-# This allows running the GUI directly with: python -m pico_gui.main
+# This allows running the GUI directly with: python -m wakemypc_desktop.main
 if __name__ == "__main__":
     main()

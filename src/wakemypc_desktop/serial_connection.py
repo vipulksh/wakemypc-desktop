@@ -30,11 +30,11 @@ The "raw REPL" (entered by sending Ctrl+A, hex 0x01) is designed for programs:
   - The Pico sends back: "OK" + output + Ctrl+D (on success).
   - To exit raw REPL: send Ctrl+B (hex 0x02).
 
-USB DETECTION (SAME AS pico_cli)
+USB DETECTION (SAME AS wakemypc)
 ---------------------------------
 We use the same VID/PID approach as the CLI tool to detect Picos.
 Raspberry Pi VID = 0x2E8A. If a serial port has this VID, it is a Pico.
-See pico_cli/serial_detect.py for a detailed explanation.
+See wakemypc/serial_detect.py for a detailed explanation.
 """
 
 import json
@@ -44,7 +44,7 @@ import serial
 import serial.tools.list_ports
 
 
-# Raspberry Pi Foundation USB Vendor ID -- same as in pico_cli/serial_detect.py
+# Raspberry Pi Foundation USB Vendor ID -- same as in wakemypc/serial_detect.py
 RASPBERRY_PI_VID = 0x2E8A
 
 # Known Pico serial-mode Product IDs
@@ -55,8 +55,8 @@ def list_pico_ports():
     """
     Scan for connected Raspberry Pi Pico devices.
 
-    Returns a list of dicts with port info (same format as pico_cli's detection).
-    This is a self-contained version so pico_gui does not depend on pico_cli.
+    Returns a list of dicts with port info (same format as wakemypc's detection).
+    This is a self-contained version so wakemypc_desktop does not depend on wakemypc.
     """
     picos = []
     for port_info in serial.tools.list_ports.comports():
